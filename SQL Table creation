@@ -1,0 +1,19 @@
+```
+
+CREATE TABLE kafka_injection (
+    emp_id INT NOT NULL,
+    emp_name VARCHAR(50) NOT NULL,
+    salary INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO kafka_injection (emp_id, emp_name, salary) VALUES (1, 'John', 50000);
+INSERT INTO kafka_injection (emp_id, emp_name, salary) VALUES (2, 'Jane', 60000);
+INSERT INTO kafka_injection (emp_id, emp_name, salary) VALUES (3, 'Bob', 70000);
+INSERT INTO kafka_injection (emp_id, emp_name, salary) VALUES (4, 'Alice', 80000);
+INSERT INTO kafka_injection (emp_id, emp_name, salary) VALUES (5, 'Dan', 90000);
+
+select * from kafka_injection
+
+```
