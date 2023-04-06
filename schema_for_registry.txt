@@ -1,62 +1,32 @@
-    {
-  "$id": "http://example.com/myURI.schema.json",
+{
+  "$id": "http://example.com/mytopic.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": false,
-  "description": "Sample schema to help you get started.",
   "properties": {
-    "brand": {
-      "description": "The type(v) type is used.",
+    "created_at": {
+      "format": "date-time",
       "type": "string"
     },
-    "car_name": {
-      "description": "The type(v) type is used.",
+    "emp_id": {
+      "type": "integer"
+    },
+    "emp_name": {
       "type": "string"
     },
-    "engine": {
-      "description": "The type(v) type is used.",
-      "type": "number"
+    "salary": {
+      "type": "integer"
     },
-    "fuel_type": {
-      "description": "The type(v) type is used.",
+    "updated_at": {
+      "format": "date-time",
       "type": "string"
-    },
-    "km_driven": {
-      "description": "The type(v) type is used.",
-      "type": "number"
-    },
-    "max_power": {
-      "description": "The type(v) type is used.",
-      "type": "number"
-    },
-    "mileage": {
-      "description": "The type(v) type is used.",
-      "type": "number"
-    },
-    "model": {
-      "description": "The type(v) type is used.",
-      "type": "string"
-    },
-    "seats": {
-      "description": "The type(v) type is used.",
-      "type": "number"
-    },
-    "seller_type": {
-      "description": "The type(v) type is used.",
-      "type": "string"
-    },
-    "selling_price": {
-      "description": "The type(v) type is used.",
-      "type": "number"
-    },
-    "transmission_type": {
-      "description": "The type(v) type is used.",
-      "type": "string"
-    },
-    "vehicle_age": {
-      "description": "The type(v) type is used.",
-      "type": "number"
     }
   },
-  "title": "SampleRecord",
+  "required": [
+    "emp_id",
+    "emp_name",
+    "salary",
+    "created_at",
+    "updated_at"
+  ],
+  "title": "My Kafka Topic Schema",
   "type": "object"
 }
